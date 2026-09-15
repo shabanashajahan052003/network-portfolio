@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabana S | Junior Network Engineer & NOC Specialist</title>
+    <meta name="description" content="Portfolio of Shabana S - Junior Network Engineer & NOC Specialist based in Dubai, UAE. Skilled in TCP/IP, Routing & Switching, Subnetting, VLANs, Wireshark, Cisco Packet Tracer, and AWS Cloud Infrastructure.">
+    <meta name="keywords" content="Network Engineer, NOC Trainee, Network Troubleshooting, TCP/IP, Cisco Packet Tracer, Wireshark, Subnetting, Dubai, AWS Cloud">
+    <meta name="author" content="Shabana S">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Interactive Network Topology Canvas -->
+    <canvas id="network-canvas"></canvas>
+
+    <div class="page-wrapper">
+
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <a href="#" class="nav-brand">
+                <div class="brand-logo">S</div>
+                <div>
+                    <div class="brand-name">Shabana S</div>
+                    <div class="status-badge">
+                        <span class="status-dot"></span> NOC Status: Online
+                    </div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#toolkit" class="nav-link">NOC Toolkit</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="resume/Shabana_shajahan (3).pdf" target="_blank" download="Shabana_S_Junior_Network_Engineer.pdf" class="btn btn-primary">
+                    <i class="fas fa-file-download"></i> Download CV
+                </a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-network-wired"></i> JUNIOR NETWORK ENGINEER | NOC SPECIALIST
+                    </div>
+                    <h1 class="hero-title">
+                        Designing, Securing & <span class="gradient-text">Optimizing Modern Networks</span>
+                    </h1>
+                    <p class="hero-description">
+                        Dedicated Network Engineer with hands-on exposure to NOC operations, network troubleshooting, and cloud infrastructure. Proficient in TCP/IP, OSI model, Subnetting, VLANs, Wireshark traffic inspection, Cisco Packet Tracer, and AWS Cloud networking.
+                    </p>
+
+                    <div class="hero-tags">
+                        <span class="tag-pill"><i class="fas fa-microchip"></i> TCP/IP & OSI Model</span>
+                        <span class="tag-pill"><i class="fas fa-calculator"></i> Subnetting (CIDR)</span>
+                        <span class="tag-pill"><i class="fas fa-project-diagram"></i> VLANs & Switching</span>
+                        <span class="tag-pill"><i class="fas fa-search-location"></i> Wireshark Inspection</span>
+                        <span class="tag-pill"><i class="fas fa-cloud"></i> AWS Cloud VPC</span>
+                        <span class="tag-pill"><i class="fas fa-terminal"></i> Python Automation</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#toolkit" class="btn btn-primary">
+                            <i class="fas fa-tools"></i> Launch NOC Calculator
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Contact Shabana
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Card & Interactive Terminal -->
+                <div class="profile-card-container">
+                    <div class="glass-card profile-card">
+                        <div class="profile-img-wrapper">
+                            <div class="profile-img-inner">
+                                <img src="images/shabana-removebg-preview.png" alt="Shabana S - Junior Network Engineer" class="profile-img">
+                            </div>
+                        </div>
+
+                        <div class="profile-info">
+                            <h3>Shabana S</h3>
+                            <p>&lt; Junior Network Engineer /&gt;</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt" style="color: var(--accent-cyan);"></i> Al-Qusais, Dubai, UAE 🇦🇪
+                            </div>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Subnetting Accuracy</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">NOC Mindset</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">99.9%</div>
+                                <div class="stat-label">Uptime Goal</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive CLI Widget -->
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">bash - shabana@noc-console: ~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-output">Welcome to NOC Command Line Interface v2.4
+Type '<span style="color: var(--accent-cyan);">help</span>' to list interactive network tools (e.g. ping, traceroute, subnet).</div>
+                            <div class="terminal-prompt-line">
+                                <span class="prompt-symbol">shabana@noc-console:~$</span>
+                                <input type="text" id="terminal-input" class="terminal-input" placeholder="type 'help' or 'whoami'..." autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-user-check"></i> Professional Profile</span>
+                    <h2 class="section-title">About <span class="gradient-text">Shabana S</span></h2>
+                    <p class="section-subtitle">A computer science engineer with specialized training in Network Infrastructure & NOC operations.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="glass-card about-card-left">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Network Operations & IT Infrastructure</h3>
+                        <p class="about-text" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                            I hold a <strong>B.Tech in Computer Science and Engineering</strong> (TKM Institute of Technology) and have completed hands-on training as a <strong>NOC Engineer Trainee at Movate Technologies</strong>.
+                        </p>
+                        <p class="about-text" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+                            My background combines core network fundamentals—such as IPv4 subnetting, VLAN routing, packet diagnostics with Wireshark, and Cisco Packet Tracer topology design—with software engineering capabilities. This unique synergy allows me to approach network fault isolation with analytical precision and script-driven efficiency.
+                        </p>
+
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="mailto:shabanashajahan052003@gmail.com" class="btn btn-primary" style="padding: 10px 20px;">
+                                <i class="fas fa-envelope"></i> Email Me
+                            </a>
+                            <a href="https://www.linkedin.com/in/shabana-ss" target="_blank" class="btn btn-secondary" style="padding: 10px 20px;">
+                                <i class="fab fa-linkedin"></i> LinkedIn Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-box">
+                            <i class="fas fa-network-wired"></i>
+                            <h4>Network Troubleshooting</h4>
+                            <p>Connectivity diagnostics, ICMP ping/traceroute analysis, DNS & DHCP fault isolation.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <i class="fas fa-search"></i>
+                            <h4>Packet Inspection</h4>
+                            <p>Deep packet analysis using Wireshark to inspect frame headers, payloads, and 3-way handshakes.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <i class="fas fa-server"></i>
+                            <h4>Infrastructure & VLANs</h4>
+                            <p>Configuring routers, switches, subnet mask CIDRs, VLAN segmentation, and LAN/WAN topologies.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <i class="fas fa-cloud"></i>
+                            <h4>AWS Cloud Networking</h4>
+                            <p>Hands-on exposure to AWS Virtual Private Cloud (VPC), EC2 instances, subnets, and Security Groups.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Matrix Section -->
+        <section id="skills" class="section" style="background: rgba(11, 17, 32, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-laptop-code"></i> Technical Matrix</span>
+                    <h2 class="section-title">Core <span class="gradient-text">Skills & Competencies</span></h2>
+                    <p class="section-subtitle">Comprehensive set of networking protocols, tools, diagnostic techniques, and cloud fundamentals.</p>
+                </div>
+
+                <div class="skills-filter">
+                    <button class="filter-btn active" data-filter="all">All Skills</button>
+                    <button class="filter-btn" data-filter="networking">Networking & Protocols</button>
+                    <button class="filter-btn" data-filter="diagnostics">Diagnostics & NOC</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud & OS</button>
+                    <button class="filter-btn" data-filter="tools">Tools & Scripting</button>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Networking Card -->
+                    <div class="glass-card skill-card" data-category="networking">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="skill-title">
+                                <h3>Networking Protocols</h3>
+                                <span>Core Standards</span>
+                            </div>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge-item">TCP/IP</span>
+                            <span class="badge-item">OSI 7-Layer Model</span>
+                            <span class="badge-item">IPv4 Addressing</span>
+                            <span class="badge-item">Subnetting (CIDR)</span>
+                            <span class="badge-item">DHCP</span>
+                            <span class="badge-item">DNS</span>
+                            <span class="badge-item">NAT / PAT</span>
+                            <span class="badge-item">VLANs</span>
+                            <span class="badge-item">Routing & Switching</span>
+                        </div>
+                    </div>
+
+                    <!-- Diagnostics Card -->
+                    <div class="glass-card skill-card" data-category="diagnostics">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-stethoscope"></i></div>
+                            <div class="skill-title">
+                                <h3>Network Diagnostics</h3>
+                                <span>Fault Isolation</span>
+                            </div>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge-item">Wireshark Analysis</span>
+                            <span class="badge-item">ICMP Ping & Traceroute</span>
+                            <span class="badge-item">Connectivity Isolation</span>
+                            <span class="badge-item">IP Config Debug</span>
+                            <span class="badge-item">DNS Troubleshooting</span>
+                            <span class="badge-item">Firewall Concepts</span>
+                            <span class="badge-item">Root Cause Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- NOC Card -->
+                    <div class="glass-card skill-card" data-category="diagnostics">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                            <div class="skill-title">
+                                <h3>NOC Operations</h3>
+                                <span>Infrastructure Monitoring</span>
+                            </div>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge-item">Network Monitoring</span>
+                            <span class="badge-item">Incident Handling</span>
+                            <span class="badge-item">Issue Escalation</span>
+                            <span class="badge-item">Troubleshooting</span>
+                            <span class="badge-item">Ticket Documentation</span>
+                            <span class="badge-item">System Maintenance</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Card -->
+                    <div class="glass-card skill-card" data-category="cloud">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="skill-title">
+                                <h3>Cloud & Infrastructure</h3>
+                                <span>Cloud Networking</span>
+                            </div>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge-item">AWS Cloud Fundamentals</span>
+                            <span class="badge-item">AWS EC2</span>
+                            <span class="badge-item">AWS VPC (Subnets & IGW)</span>
+                            <span class="badge-item">IAM Roles & Security</span>
+                            <span class="badge-item">Windows OS</span>
+                            <span class="badge-item">Linux (Ubuntu/CentOS)</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools Card -->
+                    <div class="glass-card skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                            <div class="skill-title">
+                                <h3>Network Tools</h3>
+                                <span>Software & Simulation</span>
+                            </div>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge-item">Cisco Packet Tracer</span>
+                            <span class="badge-item">Wireshark Packet Sniffer</span>
+                            <span class="badge-item">Git / GitHub</span>
+                            <span class="badge-item">VS Code</span>
+                            <span class="badge-item">Terminal / SSH</span>
+                        </div>
+                    </div>
+
+                    <!-- Scripting Card -->
+                    <div class="glass-card skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <div class="skill-title">
+                                <h3>Scripting & Databases</h3>
+                                <span>Software Competency</span>
+                            </div>
+                        </div>
+                        <div class="skill-badges">
+                            <span class="badge-item">Python</span>
+                            <span class="badge-item">SQL / MySQL</span>
+                            <span class="badge-item">REST API Integration</span>
+                            <span class="badge-item">JavaScript / HTML / CSS</span>
+                            <span class="badge-item">React.js / Django</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive NOC Lab & Subnet Calculator Section -->
+        <section id="toolkit" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-calculator"></i> Interactive Toolkit</span>
+                    <h2 class="section-title">Live NOC <span class="gradient-text">Engineering Tools</span></h2>
+                    <p class="section-subtitle">Demonstration of real-time IPv4 subnetting logic and packet inspection frame simulation.</p>
+                </div>
+
+                <div class="toolkit-grid">
+                    <!-- Tool 1: Subnet Calculator -->
+                    <div class="glass-card tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon"><i class="fas fa-calculator"></i></div>
+                            <div>
+                                <h3>Real-Time IPv4 Subnet Calculator</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Enter an IP address and select a CIDR subnet mask prefix.</p>
+                            </div>
+                        </div>
+
+                        <div class="subnet-input-group">
+                            <div class="input-wrapper">
+                                <label for="calc-ip">IP Address</label>
+                                <input type="text" id="calc-ip" class="input-field" value="192.168.1.50" placeholder="e.g. 192.168.1.1">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="calc-cidr">Subnet Prefix</label>
+                                <select id="calc-cidr" class="input-field" style="cursor: pointer;">
+                                    <option value="24" selected>/24 (255.255.255.0)</option>
+                                    <option value="25">/25 (255.255.255.128)</option>
+                                    <option value="26">/26 (255.255.255.192)</option>
+                                    <option value="27">/27 (255.255.255.224)</option>
+                                    <option value="28">/28 (255.255.255.240)</option>
+                                    <option value="29">/29 (255.255.255.248)</option>
+                                    <option value="30">/30 (255.255.255.252)</option>
+                                    <option value="16">/16 (255.255.0.0)</option>
+                                    <option value="8">/8 (255.0.0.0)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="subnet-results">
+                            <div class="result-row">
+                                <span class="result-label">Network ID</span>
+                                <div class="result-val" id="res-network">192.168.1.0</div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Broadcast Address</span>
+                                <div class="result-val" id="res-broadcast">192.168.1.255</div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Subnet Mask</span>
+                                <div class="result-val" id="res-mask">255.255.255.0</div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Wildcard Mask</span>
+                                <div class="result-val" id="res-wildcard">0.0.0.255</div>
+                            </div>
+                            <div class="result-row" style="grid-column: span 2;">
+                                <span class="result-label">Usable Host Range</span>
+                                <div class="result-val" id="res-range">192.168.1.1 - 192.168.1.254</div>
+                            </div>
+                            <div class="result-row" style="grid-column: span 2;">
+                                <span class="result-label">Total Usable Hosts</span>
+                                <div class="result-val" id="res-hosts" style="color: var(--accent-emerald);">254</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool 2: Wireshark Packet Breakdown -->
+                    <div class="glass-card tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon"><i class="fas fa-search-plus"></i></div>
+                            <div>
+                                <h3>Wireshark Frame Inspector Simulation</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Click on a frame layer to expand header payload details.</p>
+                            </div>
+                        </div>
+
+                        <div class="packet-inspector">
+                            <div class="packet-layer active">
+                                <div class="layer-title">
+                                    <span>Frame 1: Ethernet II Layer (Data Link)</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="layer-details">
+                                    Src MAC: 00:1A:2B:3C:4D:5E &rarr; Dst MAC: 00:11:22:33:44:55<br>
+                                    EtherType: IPv4 (0x0800) | Frame Length: 64 bytes
+                                </div>
+                            </div>
+
+                            <div class="packet-layer">
+                                <div class="layer-title">
+                                    <span>Frame 2: Internet Protocol IPv4 (Network)</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="layer-details">
+                                    Version: 4 | Header Length: 20 bytes | TTL: 64<br>
+                                    Protocol: TCP (6) | Src IP: 192.168.1.50 &rarr; Dst IP: 8.8.8.8
+                                </div>
+                            </div>
+
+                            <div class="packet-layer">
+                                <div class="layer-title">
+                                    <span>Frame 3: Transmission Control Protocol (Transport)</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="layer-details">
+                                    Src Port: 54321 &rarr; Dst Port: 443 (HTTPS)<br>
+                                    Sequence Number: 10024 | Ack Number: 1 | Flags: [SYN, ACK]
+                                </div>
+                            </div>
+
+                            <div class="packet-layer">
+                                <div class="layer-title">
+                                    <span>Frame 4: Application Layer Data (Payload)</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="layer-details">
+                                    Data Payload Length: 512 bytes<br>
+                                    TLS v1.3 Encrypted Record Payload [Handshake Verified]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Timeline Section -->
+        <section id="experience" class="section" style="background: rgba(11, 17, 32, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-briefcase"></i> Work History</span>
+                    <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+                    <p class="section-subtitle">Track record in NOC operations, network troubleshooting, and software development.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- NOC Trainee Card -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">NOC Engineer Trainee</h3>
+                                    <div class="company-name">Movate Technologies</div>
+                                </div>
+                                <span class="timeline-date">February 2025 – June 2025</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>Gained hands-on exposure to network infrastructure, NOC operations, network monitoring, and technical troubleshooting.</li>
+                                <li>Applied TCP/IP, IPv4, IP addressing, subnetting, DHCP, DNS, NAT, routing, and switching fundamentals to understand and resolve connectivity issues.</li>
+                                <li>Performed basic connectivity troubleshooting and fault isolation for network and infrastructure-related incidents.</li>
+                                <li>Utilized Cisco Packet Tracer to analyze and configure network topologies involving routers, switches, IP addressing, and routing.</li>
+                                <li>Used Wireshark to inspect network traffic, observe TCP 3-way handshakes, and debug packet-level communication.</li>
+                                <li>Gained practical exposure to LAN/WAN concepts, VLANs, firewall concepts, and AWS cloud networking fundamentals.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Software Developer Card -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Software Developer</h3>
+                                    <div class="company-name">BlueRipples Technologies, Trivandrum</div>
+                                </div>
+                                <span class="timeline-date">November 2025 – February 2026</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>Developed and maintained web applications using JavaScript and React.js following structured development practices.</li>
+                                <li>Integrated REST APIs and handled application data flows for reliable network communication.</li>
+                                <li>Performed debugging, testing, troubleshooting, and root-cause analysis to identify and fix technical issues.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- UI Developer Card -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">UI Developer</h3>
+                                    <div class="company-name">Valoriz Digital (Mozanta Technologies), Trivandrum</div>
+                                </div>
+                                <span class="timeline-date">May 2026 – July 2026</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>Developed responsive web interfaces using React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3, and Tailwind CSS.</li>
+                                <li>Integrated frontend applications with REST APIs to support dynamic data-driven workflows.</li>
+                                <li>Performed debugging, validation, and performance optimization to improve application reliability.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Python Django Developer Card -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Python Django Full Stack Developer</h3>
+                                    <div class="company-name">Luminar Technolab</div>
+                                </div>
+                                <span class="timeline-date">July 2025 – February 2026</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>Developed web applications using Python, Django, REST APIs, Django ORM, and MySQL database management.</li>
+                                <li>Applied systematic debugging, testing, validation, and troubleshooting practices.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Network Labs Showcase Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-folder-open"></i> Projects & Labs</span>
+                    <h2 class="section-title">Network Labs & <span class="gradient-text">Software Projects</span></h2>
+                    <p class="section-subtitle">Practical hands-on lab topology builds and software applications.</p>
+                </div>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="network-lab">Network Engineering Labs</button>
+                    <button class="filter-btn" data-filter="software">Software Projects</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Cisco Packet Tracer -->
+                    <div class="project-card-wrapper" data-category="network-lab">
+                        <div class="glass-card project-card">
+                            <span class="project-tag">NETWORK LAB</span>
+                            <h3 class="project-title">Cisco Enterprise Topology Lab</h3>
+                            <p class="project-desc">
+                                Configured multi-router and switch topologies using Cisco Packet Tracer. Implemented VLAN segmentation, Inter-VLAN routing (Router-on-a-Stick), dynamic DHCP address pool allocation, and NAT/PAT translation for internet access.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Cisco Packet Tracer</span>
+                                <span class="tech-tag">VLANs</span>
+                                <span class="tech-tag">DHCP</span>
+                                <span class="tech-tag">NAT</span>
+                                <span class="tech-tag">Inter-VLAN Routing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Wireshark Analysis -->
+                    <div class="project-card-wrapper" data-category="network-lab">
+                        <div class="glass-card project-card">
+                            <span class="project-tag">NETWORK LAB</span>
+                            <h3 class="project-title">Wireshark Traffic & Protocol Analysis</h3>
+                            <p class="project-desc">
+                                Executed live network traffic captures to inspect packet headers across OSI layers. Analyzed TCP 3-way handshakes (SYN, SYN-ACK, ACK), ARP resolution, DNS query latency, ICMP ping echo packets, and HTTP vs HTTPS payload security.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Wireshark</span>
+                                <span class="tech-tag">TCP/IP</span>
+                                <span class="tech-tag">DNS/DHCP</span>
+                                <span class="tech-tag">ICMP</span>
+                                <span class="tech-tag">Packet Inspection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: AWS Cloud VPC -->
+                    <div class="project-card-wrapper" data-category="network-lab">
+                        <div class="glass-card project-card">
+                            <span class="project-tag">NETWORK LAB</span>
+                            <h3 class="project-title">AWS VPC & Cloud Network Topology</h3>
+                            <p class="project-desc">
+                                Designed a cloud infrastructure network inside AWS. Configured Virtual Private Cloud (VPC), isolated Public and Private subnets, Internet Gateways (IGW), Route Tables, and AWS Security Group inbound/outbound rules.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS Cloud</span>
+                                <span class="tech-tag">AWS VPC</span>
+                                <span class="tech-tag">EC2</span>
+                                <span class="tech-tag">Subnetting</span>
+                                <span class="tech-tag">Security Groups</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Smart Resume Analyzer -->
+                    <div class="project-card-wrapper" data-category="software">
+                        <div class="glass-card project-card">
+                            <span class="project-tag">SOFTWARE PROJECT</span>
+                            <h3 class="project-title">Smart Resume Analyzer</h3>
+                            <p class="project-desc">
+                                Developed a Python and Django-based web application for automated resume parsing and job-role recommendations. Implemented PDF text extraction (PyPDF2), skill keyword detection, and SQL database storage.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PyPDF2</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Anti-Ragging Website -->
+                    <div class="project-card-wrapper" data-category="software">
+                        <div class="glass-card project-card">
+                            <span class="project-tag">SOFTWARE PROJECT</span>
+                            <h3 class="project-title">Anti-Ragging Solution Portal</h3>
+                            <p class="project-desc">
+                                Full-stack web application built using React.js, Node.js REST APIs, and MySQL. Features user authentication, structured incident data handling, input validation, and reliable database operations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="section" style="background: rgba(11, 17, 32, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academics</span>
+                    <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+                    <p class="section-subtitle">Academic qualifications and professional certifications.</p>
+                </div>
+
+                <div class="edu-cert-grid">
+                    <!-- Left: Education -->
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 24px;"><i class="fas fa-university" style="color: var(--accent-cyan);"></i> Education</h3>
+
+                        <div class="edu-card">
+                            <span class="edu-score">CGPA: 7.95 / 10</span>
+                            <span class="edu-year">2021 – 2025</span>
+                            <h4 style="font-size: 1.1rem; margin: 4px 0;">Bachelor of Technology (B.Tech) - CSE</h4>
+                            <p style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 500;">Minor Specialization in Biomedical Engineering</p>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">TKM Institute of Technology, Karuvellil, Kollam</p>
+                        </div>
+
+                        <div class="edu-card">
+                            <span class="edu-score">96.5% (Full A+)</span>
+                            <span class="edu-year">2020 – 2021</span>
+                            <h4 style="font-size: 1.1rem; margin: 4px 0;">Higher Secondary Education (Class XII)</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">TKM HSS Karikode, Kollam</p>
+                        </div>
+
+                        <div class="edu-card">
+                            <span class="edu-score">98% (Full A+)</span>
+                            <span class="edu-year">2019 – 2020</span>
+                            <h4 style="font-size: 1.1rem; margin: 4px 0;">Secondary School Leaving Certificate (SSLC)</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">TKM HSS Karikode, Kollam</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Certifications -->
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 24px;"><i class="fas fa-certificate" style="color: var(--accent-cyan);"></i> Certifications</h3>
+
+                        <div class="cert-card-item">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-award" style="color: var(--accent-cyan);"></i> Cloud SAP ERP Internship Certification</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">Innoval Digital Solutions</p>
+                        </div>
+
+                        <div class="cert-card-item">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-brain" style="color: var(--accent-cyan);"></i> Fundamentals of Artificial Intelligence</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">NPTEL – IIT Guwahati</p>
+                        </div>
+
+                        <div class="cert-card-item">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-robot" style="color: var(--accent-cyan);"></i> Introduction to Machine Learning</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">NPTEL – IIT Kharagpur</p>
+                        </div>
+
+                        <div class="cert-card-item">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fab fa-python" style="color: var(--accent-cyan);"></i> Python (Basic) Certification</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">HackerRank</p>
+                        </div>
+
+                        <div class="cert-card-item">
+                            <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-laptop-code" style="color: var(--accent-cyan);"></i> Full Stack Web Development Workshop</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">TATHVA’22 – NIT Calicut</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Connect Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+                    <h2 class="section-title">Let's Connect & <span class="gradient-text">Collaborate</span></h2>
+                    <p class="section-subtitle">Open for Junior Network Engineer, NOC Specialist, and Network Infrastructure roles in Dubai & UAE.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info Column -->
+                    <div class="glass-card contact-info-card">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 24px;">Contact Details</h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-detail">
+                                <label>Email Address</label>
+                                <a href="mailto:shabanashajahan052003@gmail.com">shabanashajahan052003@gmail.com</a>
+                                <button class="copy-btn" data-copy="shabanashajahan052003@gmail.com" title="Copy Email"><i class="far fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-detail">
+                                <label>Phone / WhatsApp</label>
+                                <a href="tel:+971542356645">+971 542356645</a>
+                                <button class="copy-btn" data-copy="+971 542356645" title="Copy Phone Number"><i class="far fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-detail">
+                                <label>Location</label>
+                                <p>Al-Qusais, Dubai, United Arab Emirates 🇦🇪</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="contact-detail">
+                                <label>LinkedIn</label>
+                                <a href="https://www.linkedin.com/in/shabana-ss" target="_blank">linkedin.com/in/shabana-ss</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-detail">
+                                <label>GitHub</label>
+                                <a href="https://github.com/shabanashajahan052003" target="_blank">github.com/shabanashajahan052003</a>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 32px;">
+                            <a href="resume/Shabana_shajahan (3).pdf" target="_blank" download="Shabana_S_Junior_Network_Engineer.pdf" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-file-download"></i> Download Full Resume (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column -->
+                    <div class="glass-card contact-form-card">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Send a Direct Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="sender-name">Your Full Name</label>
+                                <input type="text" id="sender-name" class="form-control" placeholder="e.g. John Doe / Hiring Manager" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-email">Your Email Address</label>
+                                <input type="email" id="sender-email" class="form-control" placeholder="e.g. manager@company.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-subject">Subject</label>
+                                <input type="text" id="sender-subject" class="form-control" placeholder="e.g. Job Opportunity / Interview Request" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-message">Message</label>
+                                <textarea id="sender-message" class="form-control" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+                                <i class="fas fa-paper-plane"></i> Transmit Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-content">
+                <div class="brand-logo" style="margin-bottom: 8px;">S</div>
+                <p style="font-size: 0.95rem; font-weight: 600;">Shabana S | Junior Network Engineer</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Connecting nodes, routing packets, ensuring maximum uptime.</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/shabana-ss" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/shabanashajahan052003" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:shabanashajahan052003@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+971542356645" class="social-link" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+                </div>
+
+                <p style="color: var(--text-dim); font-size: 0.775rem; margin-top: 16px;">
+                    &copy; 2026 Shabana S. All Rights Reserved. Built with Cyber NOC Aesthetic & Modern Web Standards.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

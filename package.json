@@ -1,0 +1,17 @@
+{
+  "name": "shabana-network-portfolio",
+  "version": "1.0.0",
+  "description": "Junior Network Engineer Portfolio for Shabana S",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 8080",
+    "dev": "npx serve . -p 8080"
+  },
+  "keywords": [
+    "network-engineer",
+    "portfolio",
+    "noc-specialist"
+  ],
+  "author": "Shabana S",
+  "license": "ISC"
+}
