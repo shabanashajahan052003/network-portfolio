@@ -1089,21 +1089,45 @@ a {
 }
 
 /* Contact Section */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 48px;
+.contact-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 .contact-info-card {
-    padding: 36px;
+    padding: 40px;
+}
+
+.contact-card-title {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 36px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 24px;
+}
+
+.contact-cv-action {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.contact-cv-action .btn {
+    padding: 14px 36px;
+    font-size: 1rem;
 }
 
 .contact-icon {
@@ -1438,8 +1462,13 @@ footer {
         left: 3px;
     }
 
-    .about-card-left, .contact-info-card, .contact-form-card, .tool-card {
-        padding: 24px;
+    .about-card-left, .contact-info-card, .tool-card {
+        padding: 28px 24px;
+    }
+
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
