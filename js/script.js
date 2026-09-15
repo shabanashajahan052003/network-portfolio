@@ -480,23 +480,54 @@ function initContactForm() {
 function initMobileNav() {
     const toggle = document.querySelector('.mobile-toggle');
     const links = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
 
     if (!toggle || !links) return;
 
-    toggle.addEventListener('click', () => {
-        links.classList.toggle('active');
-        toggle.querySelector('i').classList.toggle('fa-bars');
-        toggle.querySelector('i').classList.toggle('fa-times');
+    const toggleMenu = () => {
+        const isOpen = links.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen);
+        
+        const icon = toggle.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars', !isOpen);
+            icon.classList.toggle('fa-times', isOpen);
+        }
+
+        if (window.innerWidth <= 768) {
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+    };
+
+    const closeMenu = () => {
+        if (links.classList.contains('active')) {
+            links.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            const icon = toggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+            document.body.style.overflow = '';
+        }
+    };
+
+    toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
     });
 
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.nav-link, .nav-mobile-btn').forEach(link => {
         link.addEventListener('click', () => {
-            links.classList.remove('active');
-            if (toggle.querySelector('i')) {
-                toggle.querySelector('i').classList.add('fa-bars');
-                toggle.querySelector('i').classList.remove('fa-times');
-            }
+            closeMenu();
         });
+    });
+
+    // Close menu when clicking outside header navigation
+    document.addEventListener('click', (e) => {
+        if (navbar && !navbar.contains(e.target)) {
+            closeMenu();
+        }
     });
 }
 
